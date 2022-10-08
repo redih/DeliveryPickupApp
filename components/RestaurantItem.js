@@ -6,29 +6,29 @@ import MaterialCommunityIcons from 'react-native-vector-icons/Ionicons';
 const mexicanFood = [
       {
             name: "Taco",
-            image: require("../assets/images/assets/chicken-quesadilla-recipe-5.jpg"),
+            image: require("../assets/images/assets/Taco.jpg"),
             categories: ["Food", "RESTAURANT"],
             price: "5$",
             reviews: 120,
             rating: 4.9,
 
       },
-      // {
-      //       name: "Burrito",
-      //       image: require("../assets/images/Burrito.JPG"),
-      //       categories: ["Food", "RESTAURANT"],
-      //       price: "7$",
-      //       reviews: 120,
-      //       rating: 4.5,
-      // },
-      // {
-      //       name: "Quesadilla",
-      //       image: require("../assets/images/chicken-quesadilla-recipe-5.jpg"),
-      //       categories: ["Food", "RESTAURANT"],
-      //       price: "4$",
-      //       reviews: 120,
-      //       rating: 4.8,
-      // },
+      {
+            name: "Burrito",
+            image: require("../assets/images/Burrito.JPG"),
+            categories: ["Food", "RESTAURANT"],
+            price: "7$",
+            reviews: 120,
+            rating: 4.5,
+      },
+      {
+            name: "Quesadilla",
+            image: require("../assets/images/Quesadilla.jpg"),
+            categories: ["Food", "RESTAURANT"],
+            price: "4$",
+            reviews: 120,
+            rating: 4.8,
+      },
 ];
 
 
