@@ -22,7 +22,7 @@ export const mexicanFood = [
       },
       {
             name: "Drinks",
-            image_url: "https://media.istockphoto.com/photos/close-up-baked-chicken-and-cheese-quesadillas-served-with-salsa-and-picture-id1137678835?k=20&m=1137678835&s=612x612&w=0&h=0tKKiyiGsjZrJzVTPLd8w7HQkKM1g43APd1jlwiikq4=",
+            image_url: "https://images.pexels.com/photos/602750/pexels-photo-602750.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
             categories: ["Food", "RESTAURANT"],
             price: "4$",
             reviews: 120,
