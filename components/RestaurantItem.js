@@ -28,6 +28,25 @@ export const mexicanFood = [
             reviews: 120,
             rating: 4.8,
       },
+      {
+            name: "Deserts",
+            image_url: "https://media.istockphoto.com/photos/fresh-cakes-picture-id497959594?k=20&m=497959594&s=612x612&w=0&h=Pzq7lXr-_J2p9aNEio4QrV3pquWUr4TIAu3yRMqeV_E=",
+            categories: ["Food", "RESTAURANT"],
+            price: "5$",
+            reviews: 120,
+            rating: 4.9,
+      },
+      {
+            name: "Chefs special",
+            image_url: "https://i.ytimg.com/vi/8-VYKEZxgao/mqdefault.jpg",
+            categories: ["Food", "RESTAURANT"],
+            price: "5$",
+            reviews: 120,
+            rating: 4.9,
+      },
+      
+       
+
 ];
 
 export default function RestaurantItem(props) {
