@@ -4,7 +4,7 @@ import MaterialCommunityIcons from 'react-native-vector-icons/Ionicons';
 
 export const mexicanFood = [
       {
-            name: "Taco",
+            name: "Appetizers",
             image_url: "https://media.istockphoto.com/photos/small-4inch-soft-beef-tacos-picture-id1146906219?k=20&m=1146906219&s=612x612&w=0&h=9Svekwx7tMDsk5-T9h2Vv6qosqMVkmd1Gu16Dw4amoA=",
             categories: ["Food", "RESTAURANT"],
             price: "5$",
@@ -13,7 +13,7 @@ export const mexicanFood = [
 
       },
       {
-            name: "Burrito",
+            name: "Main course",
             image_url: "https://p.kindpng.com/picc/s/86-863070_download-burrito-png-free-download-taco-bell-burrito.png",
             categories: ["Food", "RESTAURANT"],
             price: "7$",
@@ -21,7 +21,7 @@ export const mexicanFood = [
             rating: 4.5,
       },
       {
-            name: "Quesadilla",
+            name: "Drinks",
             image_url: "https://media.istockphoto.com/photos/close-up-baked-chicken-and-cheese-quesadillas-served-with-salsa-and-picture-id1137678835?k=20&m=1137678835&s=612x612&w=0&h=0tKKiyiGsjZrJzVTPLd8w7HQkKM1g43APd1jlwiikq4=",
             categories: ["Food", "RESTAURANT"],
             price: "4$",
