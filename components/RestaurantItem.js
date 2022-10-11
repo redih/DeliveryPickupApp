@@ -2,11 +2,35 @@ import React from 'react';
 import { View, Text, Image, TouchableOpacity } from 'react-native';
 import MaterialCommunityIcons from 'react-native-vector-icons/Ionicons';
 
+export const mexicanFood = [
+      {
+            name: "Taco",
+            image_url: "https://media.istockphoto.com/photos/small-4inch-soft-beef-tacos-picture-id1146906219?k=20&m=1146906219&s=612x612&w=0&h=9Svekwx7tMDsk5-T9h2Vv6qosqMVkmd1Gu16Dw4amoA=",
+            categories: ["Food", "RESTAURANT"],
+            price: "5$",
+            reviews: 120,
+            rating: 4.9,
 
+      },
+      {
+            name: "Burrito",
+            image_url: "https://p.kindpng.com/picc/s/86-863070_download-burrito-png-free-download-taco-bell-burrito.png",
+            categories: ["Food", "RESTAURANT"],
+            price: "7$",
+            reviews: 120,
+            rating: 4.5,
+      },
+      {
+            name: "Quesadilla",
+            image_url: "https://media.istockphoto.com/photos/close-up-baked-chicken-and-cheese-quesadillas-served-with-salsa-and-picture-id1137678835?k=20&m=1137678835&s=612x612&w=0&h=0tKKiyiGsjZrJzVTPLd8w7HQkKM1g43APd1jlwiikq4=",
+            categories: ["Food", "RESTAURANT"],
+            price: "4$",
+            reviews: 120,
+            rating: 4.8,
+      },
+];
 
-
-
-export default function RestaurantItems() {
+export default function RestaurantItem(props) {
 
       return (
             <TouchableOpacity activeOpacity={1} style={{ marginBottom: 30 }}>
@@ -68,31 +92,4 @@ const RestaurantInfo = (props) => (
       </View>
       
 )
-const mexicanFood = [
-      {
-            name: "Taco",
-            image_url: "https://media.istockphoto.com/photos/small-4inch-soft-beef-tacos-picture-id1146906219?k=20&m=1146906219&s=612x612&w=0&h=9Svekwx7tMDsk5-T9h2Vv6qosqMVkmd1Gu16Dw4amoA=",
-            categories: ["Food", "RESTAURANT"],
-            price: "5$",
-            reviews: 120,
-            rating: 4.9,
-
-      },
-      {
-            name: "Burrito",
-            image_url: "https://p.kindpng.com/picc/s/86-863070_download-burrito-png-free-download-taco-bell-burrito.png",
-            categories: ["Food", "RESTAURANT"],
-            price: "7$",
-            reviews: 120,
-            rating: 4.5,
-      },
-      {
-            name: "Quesadilla",
-            image_url: "https://media.istockphoto.com/photos/close-up-baked-chicken-and-cheese-quesadillas-served-with-salsa-and-picture-id1137678835?k=20&m=1137678835&s=612x612&w=0&h=0tKKiyiGsjZrJzVTPLd8w7HQkKM1g43APd1jlwiikq4=",
-            categories: ["Food", "RESTAURANT"],
-            price: "4$",
-            reviews: 120,
-            rating: 4.8,
-      },
-];
 
