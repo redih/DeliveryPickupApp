@@ -1,6 +1,9 @@
-import react, { useEffect } from "react";
 import { View, Text, SafeAreaView, ScrollView } from "react-native";
-import Categories from "../components/categories";
+import { Divider } from "react-native-elements";
+import HeaderTabs from "../components/home/HeaderTabs";
+import RestaurantItem, { mexicanFood } from "../components/home/RestaurantItem";
+import SearchBar from "../components/home/SearchBar";
+import BottomTab from "../components/home/BottomTab";
 import HeaderTabs from "../components/HeaderTabs";
 import RestaurantItem, { mexicanFood } from "../components/RestaurantItem";
 import SearchBar from "../components/SearchBar";
