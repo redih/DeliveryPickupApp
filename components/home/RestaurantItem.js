@@ -54,12 +54,12 @@ export default function RestaurantItem({ navigation }) {
     <>
       {mexicanFood.map((restaurant, index) => (
         <TouchableOpacity
+          key={index}
           activeOpacity={1}
           style={{ marginBottom: 30 }}
           onPress={() => navigation.navigate("MenuDetails")}
         >
           <View
-            key={index}
             style={{ marginTop: 10, padding: 5, backgrooundColor: "white" }}
           >
             <RestaurantImage image={restaurant.image_url} />
