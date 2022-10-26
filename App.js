@@ -1,8 +1,17 @@
-import { View, Text } from "react-native";
-import Home from "./screens/home";
+import * as React from 'react';
+import { NavigationContainer, StackActions } from '@react-navigation/native';
+import Home from './screens/Home';
+import LoginBox from './screens/LoginBox';
+import Navigator from './routes/HomeStack';
 
-export default function App() {
-  return (
-    <Home />
-  );
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
+
+const Stack = createNativeStackNavigator();
+
+export default function App(){
+  return(
+    <Navigator/>
+  )
+   
 }
