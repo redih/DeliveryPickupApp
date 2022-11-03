@@ -7,7 +7,8 @@ const image =
 const title = "Appetizers";
 
 const description = "Mexican Appetizers with Seasoning Mix ~ $ ~ 4.6 ( 500+ )";
-export default function AboutMenu() {
+export default function AboutMenu(props) {
+  
   return (
     <View>
       <MenuImage image={image} />
