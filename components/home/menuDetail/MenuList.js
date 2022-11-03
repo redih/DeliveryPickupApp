@@ -1,6 +1,5 @@
 import React from "react";
-import { View, Text, StyleSheet, Image } from "react-native";
-import { ScrollView } from "react-native-gesture-handler";
+import { View, Text, StyleSheet, Image, ScrollView } from "react-native";
 import BouncyCheckbox from "react-native-bouncy-checkbox";
 import { Divider } from "react-native-elements";
 
@@ -53,27 +52,29 @@ const styles = StyleSheet.create({
 
 export default function MenuList() {
   return (
-    <ScrollView showsVerticalScrollIndicator={false}>
-      {foodList.map((food, index) => (
-        <View key={index}>
-          <View style={styles.menuListStyle}>
-            <BouncyCheckbox
-              iconStyle={{
-                borderColor: "Gray",
-                borderRadius: 7,
-              }}
-              fillColor="#a89a32"
+    <ScrollView>
+      <View>
+        {foodList.map((food, index) => (
+          <View key={index}>
+            <View style={styles.menuListStyle}>
+              <BouncyCheckbox
+                iconStyle={{
+                  borderColor: "Gray",
+                  borderRadius: 7,
+                }}
+                fillColor="#a89a32"
+              />
+              <FoodInfo food={food} />
+              <FoodImage food={food} />
+            </View>
+            <Divider
+              width={0.4}
+              orientation="vertical"
+              style={{ marginHorizontal: 20 }}
             />
-            <FoodInfo food={food} />
-            <FoodImage food={food} />
           </View>
-          <Divider
-            width={0.4}
-            orientation="vertical"
-            style={{ marginHorizontal: 20 }}
-          />
-        </View>
-      ))}
+        ))}
+      </View>
     </ScrollView>
   );
 }

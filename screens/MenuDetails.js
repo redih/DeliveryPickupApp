@@ -4,6 +4,7 @@ import AboutMenu from "../components/home/menuDetail/AboutMenu";
 import { Divider } from "react-native-elements";
 import MenuList from "../components/home/menuDetail/MenuList";
 import Cart from "../components/home/menuDetail/Cart";
+import { ScrollView } from "react-native";
 
 export default function MenuDetails({ route, navigation }) {
   return (
