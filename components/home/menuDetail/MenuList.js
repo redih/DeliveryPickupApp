@@ -36,6 +36,22 @@ const foodList = [
       "https://cdn.apartmenttherapy.info/image/upload/f_jpg,q_auto:eco,c_fill,g_auto,w_1500,ar_1:1/k%2FPhoto%2FRecipe%20Ramp%20Up%2F2022-01-Jicama-Fries%2FJicama_Fries_4",
     price: "3.50$",
   },
+  {
+    title: "Deep Fried Gucamole",
+    description:
+      "Bright guacamole is coated in crushed chips and deep-fried to golden perfection. ",
+    image:
+      "https://hips.hearstapps.com/hmg-prod/images/delish-deep-fried-guac-still005-1571070801.jpg?crop=0.561xw%3A0.561xh%3B0.192xw%2C0.222xh&resize=480%3A270",
+    price: "4.50$",
+  },
+  {
+    title: "Deep Fried Gucamole",
+    description:
+      "Bright guacamole is coated in crushed chips and deep-fried to golden perfection. ",
+    image:
+      "https://hips.hearstapps.com/hmg-prod/images/delish-deep-fried-guac-still005-1571070801.jpg?crop=0.561xw%3A0.561xh%3B0.192xw%2C0.222xh&resize=480%3A270",
+    price: "4.50$",
+  },
 ];
 
 const styles = StyleSheet.create({
@@ -44,15 +60,16 @@ const styles = StyleSheet.create({
     justifyContent: "space-evenly",
     margin: 20,
   },
+
   titleStyle: {
-    fontSize: 19,
+    fontSize: 20,
     fontWeight: "600",
   },
 });
 
 export default function MenuList() {
   return (
-    <ScrollView>
+    <ScrollView vertical showsVerticalScrollIndicator={true}>
       <View>
         {foodList.map((food, index) => (
           <View key={index}>
@@ -80,7 +97,7 @@ export default function MenuList() {
 }
 
 const FoodInfo = (props) => (
-  <View style={{ width: 240, justifyContent: "space-evenly" }}>
+  <View style={{ height: 120, width: 240, justifyContent: "space-evenly" }}>
     <Text style={styles.titleStyle}>{props.food.title}</Text>
     <Text>{props.food.description}</Text>
     <Text>{props.food.price}</Text>
