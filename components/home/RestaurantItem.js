@@ -57,17 +57,7 @@ export default function RestaurantItem({ navigation }) {
           key={index}
           activeOpacity={1}
           style={{ marginBottom: 30 }}
-          onPress={() =>
-            navigation.navigate(
-              "MenuDetails",
-              restaurant.name,
-              restaurant.image_url,
-              restaurant.price,
-              restaurant.rating,
-              restaurant.reviews,
-              restaurant.categories
-            )
-          }
+          onPress={() => navigation.navigate("MenuDetails")}
         >
           <View
             style={{ marginTop: 10, padding: 5, backgrooundColor: "white" }}

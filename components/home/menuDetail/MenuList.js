@@ -1,6 +1,6 @@
 import React from "react";
-import { View, Text, StyleSheet, Image } from "react-native";
-import { ScrollView } from "react-native";
+import { View, Text, StyleSheet, Image, ScrollView } from "react-native";
+import BouncyCheckbox from "react-native-bouncy-checkbox";
 import { Divider } from "react-native-elements";
 
 const foodList = [
@@ -41,31 +41,40 @@ const foodList = [
 const styles = StyleSheet.create({
   menuListStyle: {
     flexDirection: "row",
-    justifyContent: "space-between",
-    margin: 10,
+    justifyContent: "space-evenly",
+    margin: 20,
   },
   titleStyle: {
-    fontSize: 20,
+    fontSize: 19,
     fontWeight: "600",
   },
 });
 
 export default function MenuList() {
   return (
-    <ScrollView showsVerticalScrollIndicator={false}>
-      {foodList.map((food, index) => (
-        <View key={index}>
-          <View style={styles.menuListStyle}>
-            <FoodInfo food={food} />
-            <FoodImage food={food} />
+    <ScrollView>
+      <View>
+        {foodList.map((food, index) => (
+          <View key={index}>
+            <View style={styles.menuListStyle}>
+              <BouncyCheckbox
+                iconStyle={{
+                  borderColor: "Gray",
+                  borderRadius: 7,
+                }}
+                fillColor="#a89a32"
+              />
+              <FoodInfo food={food} />
+              <FoodImage food={food} />
+            </View>
+            <Divider
+              width={0.4}
+              orientation="vertical"
+              style={{ marginHorizontal: 20 }}
+            />
           </View>
-          <Divider
-            width={0.4}
-            orientation="vertical"
-            style={{ marginHorizontal: 20 }}
-          />
-        </View>
-      ))}
+        ))}
+      </View>
     </ScrollView>
   );
 }
@@ -82,7 +91,12 @@ const FoodImage = (props) => (
   <View>
     <Image
       source={{ uri: props.food.image }}
-      style={{ width: 100, height: 100, borderRadius: 10 }}
+      style={{
+        width: 100,
+        height: 100,
+        borderRadius: 10,
+        marginLeft: 10,
+      }}
     />
   </View>
 );
