@@ -8,7 +8,6 @@ const title = "Appetizers";
 
 const description = "Mexican Appetizers with Seasoning Mix ~ $ ~ 4.6 ( 500+ )";
 export default function AboutMenu(props) {
-  
   return (
     <View>
       <MenuImage image={image} />
@@ -28,7 +27,7 @@ const MenuTitle = (props) => (
       fontSize: 30,
       fontWeight: "600",
       marginTop: 10,
-      marginHorizontal: 20,
+      marginHorizontal: 15,
     }}
   >
     {props.title}
@@ -40,7 +39,7 @@ const MenuDescription = (props) => (
     style={{
       fontWeight: "300",
       marginTop: 10,
-      marginHorizontal: 20,
+      marginHorizontal: 15,
       fontSize: 15,
     }}
   >
