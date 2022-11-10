@@ -1,7 +1,8 @@
 import React from "react";
 import { View, Text, TouchableOpacity } from "react-native";
 
-export default function Cart() {
+
+export default function Cart({}) {
   return (
     <View
       style={{
@@ -10,7 +11,7 @@ export default function Cart() {
         justifyContent: "center",
         flexDirection: "row",
         position: "absolute",
-        bottom: -190,
+        bottom: 130,
         zIndex: 999,
       }}
     >
@@ -23,12 +24,14 @@ export default function Cart() {
       >
         <TouchableOpacity
           style={{
-            marginTop: 10,
+            marginTop: 20,
             backgroundColor: "#a89a32",
             alignItems: "center",
+            // flexDirection: "row",
+            // justifyContent: "center",
             padding: 15,
             borderRadius: 50,
-            width: 150,
+            width: 200,
             position: "relative",
           }}
         >
