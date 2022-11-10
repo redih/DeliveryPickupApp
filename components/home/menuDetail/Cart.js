@@ -7,10 +7,10 @@ export default function Cart() {
       style={{
         flex: 1,
         alignItems: "center",
-        flexDirection: "row",
         justifyContent: "center",
+        flexDirection: "row",
         position: "absolute",
-        bottom: -220,
+        bottom: -190,
         zIndex: 999,
       }}
     >

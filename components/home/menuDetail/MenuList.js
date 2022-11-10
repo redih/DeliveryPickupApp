@@ -36,6 +36,30 @@ const foodList = [
       "https://cdn.apartmenttherapy.info/image/upload/f_jpg,q_auto:eco,c_fill,g_auto,w_1500,ar_1:1/k%2FPhoto%2FRecipe%20Ramp%20Up%2F2022-01-Jicama-Fries%2FJicama_Fries_4",
     price: "3.50$",
   },
+  {
+    title: "Jicama Fries",
+    description:
+      "Jicama is a root vegetable that is a great substitute for potatoes. ",
+    image:
+      "https://cdn.apartmenttherapy.info/image/upload/f_jpg,q_auto:eco,c_fill,g_auto,w_1500,ar_1:1/k%2FPhoto%2FRecipe%20Ramp%20Up%2F2022-01-Jicama-Fries%2FJicama_Fries_4",
+    price: "3.50$",
+  },
+  {
+    title: "Jicama Fries",
+    description:
+      "Jicama is a root vegetable that is a great substitute for potatoes. ",
+    image:
+      "https://cdn.apartmenttherapy.info/image/upload/f_jpg,q_auto:eco,c_fill,g_auto,w_1500,ar_1:1/k%2FPhoto%2FRecipe%20Ramp%20Up%2F2022-01-Jicama-Fries%2FJicama_Fries_4",
+    price: "3.50$",
+  },
+  {
+    title: "Jicama Fries",
+    description:
+      "Jicama is a root vegetable that is a great substitute for potatoes. ",
+    image:
+      "https://cdn.apartmenttherapy.info/image/upload/f_jpg,q_auto:eco,c_fill,g_auto,w_1500,ar_1:1/k%2FPhoto%2FRecipe%20Ramp%20Up%2F2022-01-Jicama-Fries%2FJicama_Fries_4",
+    price: "3.50$",
+  },
 ];
 
 const styles = StyleSheet.create({
@@ -53,7 +77,7 @@ const styles = StyleSheet.create({
 
 export default function MenuList() {
   return (
-    <ScrollView horizontal showsVerticaScrollIndicator={true}>
+    <ScrollView horizontal showsHorizontalScrollIndicator={false}>
       {foodList.map((food, index) => (
         <View key={index}>
           <View style={styles.menuListStyle}>
@@ -86,7 +110,7 @@ const FoodInfo = (props) => (
   </View>
 );
 
-const FoodImage = ({ marginLeft, ...props }) => (
+const FoodImage = (props) => (
   <View>
     <Image
       source={{ uri: props.food.image }}
