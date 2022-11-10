@@ -1,7 +1,8 @@
 import React from "react";
 import { View, Text, TouchableOpacity } from "react-native";
 
-export default function Cart() {
+
+export default function Cart({ navigation }) {
   return (
     <View
       style={{

@@ -8409,7 +8409,7 @@ react-is@^16.13.0, react-is@^16.13.1, react-is@^16.7.0:
 
 react-native-bouncy-checkbox@^3.0.5:
   version "3.0.5"
-  resolved "https://registry.npmjs.org/react-native-bouncy-checkbox/-/react-native-bouncy-checkbox-3.0.5.tgz"
+  resolved "https://registry.yarnpkg.com/react-native-bouncy-checkbox/-/react-native-bouncy-checkbox-3.0.5.tgz#8f9960247e4651c33db043f45a7793aa7e58e26b"
   integrity sha512-lEUBgqZjJa7ru4SA9pPd3dYhsdPW8a+CIgRv6Gp9J/WxAvgbrzcYdODRngE5xbQboQPjQzPePpp5/w9janWHYg==
 
 react-native-codegen@^0.69.2:

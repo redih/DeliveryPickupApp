@@ -53,7 +53,7 @@ const styles = StyleSheet.create({
 
 export default function MenuList() {
   return (
-    <ScrollView horizontal showsVerticaScrollIndicator={true}>
+    <ScrollView>
       {foodList.map((food, index) => (
         <View key={index}>
           <View style={styles.menuListStyle}>
@@ -72,6 +72,8 @@ export default function MenuList() {
             orientation="vertical"
             style={{ marginHorizontal: 20 }}
           />
+          
+        
         </View>
       ))}
     </ScrollView>
