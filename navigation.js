@@ -5,7 +5,9 @@ import Home from "./screens/home";
 import MenuDetails from "./screens/MenuDetails";
 import LoginBox from "./screens/LoginBox";
 import { Provider as ReduxProvider } from "react-redux";
-import store from "./redux/store";
+import configureStore from "./redux/store";
+
+const store = configureStore();
 
 export default function RootNavigation() {
   const Stack = createStackNavigator();
