@@ -5,50 +5,45 @@ import { Divider } from "react-native-elements";
 import MenuList from "../components/home/menuDetail/MenuList";
 import Cart from "../components/home/menuDetail/Cart";
 import { ScrollView } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
 
 const foodList = [
   {
-    title: "Lasagna",
-    description: "With butter lettuce, tomato and sauce bechamel",
-    price: "$13.50",
-    image:
-      "https://www.modernhoney.com/wp-content/uploads/2019/08/Classic-Lasagna-14-scaled.jpg",
-  },
-  {
-    title: "Tandoori Chicken",
+    title: "Mexican Cups",
     description:
-      "Amazing Indian dish with tenderloin chicken off the sizzles 🔥",
-    price: "$19.20",
-    image: "https://i.ytimg.com/vi/BKxGodX9NGg/maxresdefault.jpg",
+      "Mini Cups biscuits with seasoning mix, tomatoes and green chiles ",
+    price: "4.00$",
+    image:
+      "https://images-gmi-pmc.edge-generalmills.com/d13cbaa5-fa4e-460c-ac53-9cdf02df562d.jpg",
   },
   {
-    title: "Chilaquiles",
+    title: "Jalapeno Poppers Dip",
     description:
-      "Chilaquiles with cheese and sauce. A delicious mexican dish 🇲🇽",
-    price: "$14.50",
+      "Cream cheese, jalapenos and bread crumbs are mixed to form a creamy dip",
+    price: "5.50$",
     image:
-      "https://i2.wp.com/chilipeppermadness.com/wp-content/uploads/2020/11/Chilaquales-Recipe-Chilaquiles-Rojos-1.jpg",
+      "https://hips.hearstapps.com/hmg-prod/images/190426-instant-pot-jalapeno-popper-dip-horizontal-089-1557946986.jpg",
   },
   {
-    title: "Chicken Caesar Salad",
+    title: "Deep Fried Gucamole",
     description:
-      "One can never go wrong with a chicken caesar salad. Healthy option with greens and proteins!",
-    price: "$21.50",
+      "Bright guacamole is coated in crushed chips and deep-fried to golden perfection. ",
+    price: "4.50$",
     image:
-      "https://images.themodernproper.com/billowy-turkey/production/posts/2019/Easy-italian-salad-recipe-10.jpg?w=1200&h=1200&q=82&fm=jpg&fit=crop&fp-x=0.5&fp-y=0.5&dm=1614096227&s=c0f63a30cef3334d97f9ecad14be51da",
+      "https://hips.hearstapps.com/hmg-prod/images/delish-deep-fried-guac-still005-1571070801.jpg?crop=0.561xw%3A0.561xh%3B0.192xw%2C0.222xh&resize=480%3A270",
   },
   {
-    title: "Lasagna",
-    description: "With butter lettuce, tomato and sauce bechamel",
-    price: "$13.50",
+    title: "Jicama Fries",
+    description:
+      "Jicama is a root vegetable that is a great substitute for potatoes. ",
+    price: "3.50$",
     image:
-      "https://thestayathomechef.com/wp-content/uploads/2017/08/Most-Amazing-Lasagna-2-e1574792735811.jpg",
+      "https://cdn.apartmenttherapy.info/image/upload/f_jpg,q_auto:eco,c_fill,g_auto,w_1500,ar_1:1/k%2FPhoto%2FRecipe%20Ramp%20Up%2F2022-01-Jicama-Fries%2FJicama_Fries_4",
   },
 ];
 
 export default function MenuDetails({ route, navigation }) {
   return (
+<<<<<<< HEAD
     
     <SafeAreaView>
       <AboutMenu route={route} />
@@ -64,5 +59,15 @@ export default function MenuDetails({ route, navigation }) {
     
 
     
+=======
+    <ScrollView showsVerticalScrollIndicator={false}>
+      <View>
+        <AboutMenu route={route} />
+        <Divider width={1.8} style={{ marginVertical: 20 }} />
+        <MenuList foodList={foodList} />
+        <Cart navigation={navigation} />
+      </View>
+    </ScrollView>
+>>>>>>> 76ef92ee94add22e3003a690b635a4255ebfc1fa
   );
 }
