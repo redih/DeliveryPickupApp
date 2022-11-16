@@ -49,8 +49,8 @@ const foodList = [
 
 export default function MenuDetails({ route, navigation }) {
   return (
-    <View>
-      <ScrollView>
+    
+    <SafeAreaView>
       <AboutMenu route={route} />
       <Divider width={1.8} style={{ marginVertical: 20 }} />
       <MenuList foodList={foodList}/>
@@ -60,8 +60,8 @@ export default function MenuDetails({ route, navigation }) {
 
         {'\n'}
       </Text>
-      </ScrollView>
-    </View>
+    </SafeAreaView>
+    
 
     
   );

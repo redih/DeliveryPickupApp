@@ -43,8 +43,8 @@ import { useDispatch } from "react-redux";
 
 const styles = StyleSheet.create({
   menuListStyle: {
-    flexDirection: "row",
-    justifyContent: "space-between",
+    flexDirection: 'row',
+    justifyContent: 'space-between',
     margin: 20,
   },
 

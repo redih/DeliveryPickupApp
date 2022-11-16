@@ -10,8 +10,8 @@ export default function Cart({}) {
         alignItems: "center",
         justifyContent: "center",
         flexDirection: "row",
-        position: "absolute",
-        bottom: 130,
+        // position: "absolute",
+        bottom: 80,
         zIndex: 999,
       }}
     >
