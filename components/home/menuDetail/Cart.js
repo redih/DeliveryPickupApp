@@ -3,6 +3,9 @@ import { StyleSheet } from "react-native";
 import { View, Text, TouchableOpacity, Modal } from "react-native";
 import { useSelector } from "react-redux";
 import OrderCheckoutList from "./OrderCheckoutList";
+import firebase from "firebase/app";
+
+
 
 export default function Cart({}) {
   const [modalVisible, setModalVisible] = useState(false);
@@ -17,6 +20,15 @@ export default function Cart({}) {
     currency: "USD",
   });
   console.log(totalAmount);
+
+  const addOrderToFirebase = () => {
+    const db = firebase.firestore();
+    db.collection("orders").add({
+      items: items,
+      createdAt: firebase.firestore.FieldValue.serverTimestamp(),
+    });
+    //setModalVisible(false);
+  };
 
   const styles = StyleSheet.create({
     modalContainer: {
@@ -76,7 +88,10 @@ export default function Cart({}) {
                   width: 200,
                   position: "relative",
                 }}
-                onPress={() => setModalVisible(false)}
+                onPress={() => {
+                  addOrderToFirebase();
+                  setModalVisible(false);
+                }}
               >
                 <Text> Submit Payment </Text>
                 <Text
