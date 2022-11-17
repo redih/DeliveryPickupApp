@@ -98,7 +98,7 @@ export default function LoginBox({ navigation }) {
     createUserWithEmailAndPassword(auth, email, pwd)
       .then((userCredential) => {
         const user = userCredential.user;
-        console.log("Regestered logged in with: ", user.email);
+        console.log("Registered logged in with: ", user.email);
       })
       .catch((error) => alert(error.message));
   };
