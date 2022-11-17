@@ -25,10 +25,9 @@ export default function Account({ navigation }){
     .catch(error => alert(error.message))
    }
 
-
-
   return (
-    <SafeAreaView>
+    <SafeAreaView> 
+      {/* //Account */}
 
     
     <ScrollView>
