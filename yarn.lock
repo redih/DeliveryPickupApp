@@ -2028,7 +2028,7 @@
   "resolved" "https://registry.npmjs.org/@protobufjs/utf8/-/utf8-1.1.0.tgz"
   "version" "1.1.0"
 
-"@react-native-async-storage/async-storage@react-native-async-storage/async-storage":
+"@react-native-async-storage/async-storage@github:react-native-async-storage/async-storage":
   "resolved" "git+ssh://git@github.com/react-native-async-storage/async-storage.git#1ae6fa8d4fde7f8c3e2a8faa0fa11ec7da93f62e"
   "version" "1.17.11"
   dependencies:
