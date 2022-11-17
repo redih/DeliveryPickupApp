@@ -100,19 +100,6 @@ export default function Cart({}) {
     );
   };
   return (
-<<<<<<< HEAD
-    <View
-      style={{
-        flex: 1,
-        alignItems: "center",
-        justifyContent: "center",
-        flexDirection: "row",
-        // position: "absolute",
-        bottom: 80,
-        zIndex: 999,
-      }}
-    >
-=======
     <>
       <Modal
         animationType="fade"
@@ -122,7 +109,6 @@ export default function Cart({}) {
       >
         {checkoutContent()}
       </Modal>
->>>>>>> 76ef92ee94add22e3003a690b635a4255ebfc1fa
       <View
         style={{
           flex: 1,

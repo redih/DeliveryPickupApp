@@ -43,31 +43,12 @@ const foodList = [
 
 export default function MenuDetails({ route, navigation }) {
   return (
-<<<<<<< HEAD
-    
-    <SafeAreaView>
-      <AboutMenu route={route} />
-      <Divider width={1.8} style={{ marginVertical: 20 }} />
-      <MenuList foodList={foodList}/>
-      {/* <Cart/> */}
-      <Cart navigation={navigation} />
-      <Text>
-
-        {'\n'}
-      </Text>
-    </SafeAreaView>
-    
-
-    
-=======
     <ScrollView showsVerticalScrollIndicator={false}>
       <View>
         <AboutMenu route={route} />
-        <Divider width={1.8} style={{ marginVertical: 20 }} />
-        <MenuList foodList={foodList} />
-        <Cart navigation={navigation} />
+        <Divider width={1.8} style={{ marginVertical: 10 }} />
+        <MenuList />
       </View>
     </ScrollView>
->>>>>>> 76ef92ee94add22e3003a690b635a4255ebfc1fa
   );
 }
