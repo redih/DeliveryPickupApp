@@ -46,9 +46,8 @@ export default function MenuDetails({ route, navigation }) {
     <ScrollView showsVerticalScrollIndicator={false}>
       <View>
         <AboutMenu route={route} />
-        <Divider width={1.8} style={{ marginVertical: 20 }} />
-        <MenuList foodList={foodList} />
-        <Cart navigation={navigation} />
+        <Divider width={1.8} style={{ marginVertical: 10 }} />
+        <MenuList />
       </View>
     </ScrollView>
   );

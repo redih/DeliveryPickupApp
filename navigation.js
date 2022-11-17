@@ -22,9 +22,10 @@ export default function RootNavigation() {
           initialRouteName="LoginBox"
           screenOptions={screenOptions}
         >
+          <Stack.Screen name="LoginBox" component={LoginBox} />
           <Stack.Screen name="Home" component={Home} />
           <Stack.Screen name="MenuDetails" component={MenuDetails} />
-          <Stack.Screen name="LoginBox" component={LoginBox} />
+
         </Stack.Navigator>
       </NavigationContainer>
     </ReduxProvider>
