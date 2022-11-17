@@ -47,7 +47,8 @@ export default function MenuDetails({ route, navigation }) {
       <View>
         <AboutMenu route={route} />
         <Divider width={1.8} style={{ marginVertical: 10 }} />
-        <MenuList />
+        <MenuList foodList={foodList} />
+        <Cart navigation={navigation} />
       </View>
     </ScrollView>
   );
