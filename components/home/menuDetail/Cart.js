@@ -5,9 +5,7 @@ import { useSelector } from "react-redux";
 import OrderCheckoutList from "./OrderCheckoutList";
 import firebase from "firebase/app";
 
-
-
-export default function Cart({}) {
+export default function Cart({ navigation }) {
   const [modalVisible, setModalVisible] = useState(false);
 
   const { items } = useSelector((state) => state.cartReducer.selectedItems);
@@ -89,8 +87,9 @@ export default function Cart({}) {
                   position: "relative",
                 }}
                 onPress={() => {
-                  addOrderToFirebase();
+                  //addOrderToFirebase();
                   setModalVisible(false);
+                  navigation.navigate("OrderCompleted");
                 }}
               >
                 <Text> Submit Payment </Text>

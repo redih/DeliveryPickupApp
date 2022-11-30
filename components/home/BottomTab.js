@@ -1,16 +1,8 @@
 import react from "react";
-import { View, Text, TouchableOpacity, Button, } from "react-native";
+import { View, Text, TouchableOpacity, Button } from "react-native";
 import FontAwesome5 from "react-native-vector-icons/FontAwesome5";
 
-
-
-
-
-
 export default function BottomTab() {
-
-
-
   return (
     <View
       style={{
@@ -24,15 +16,9 @@ export default function BottomTab() {
       <Icon icon="home" text="Home" />
       <Icon icon="shopping-cart" text="Cart" />
       <Icon icon="receipt" text="Orders" />
-      
-      
     </View>
-
- 
   );
-    }
-
-
+}
 
 const Icon = (props) => (
   <TouchableOpacity>
@@ -46,11 +32,8 @@ const Icon = (props) => (
           color: "#a89a32",
         }}
       />
-    
+
       <Text> {props.text} </Text>
-
     </View>
-    
   </TouchableOpacity>
-
 );
