@@ -1,14 +1,13 @@
 import React, { useState } from "react";
-import { StyleSheet } from "react-native";
-import { View, Text, TouchableOpacity, Modal } from "react-native";
+import { View, Text, TouchableOpacity, Modal, StyleSheet } from "react-native";
 import { useSelector } from "react-redux";
 import OrderCheckoutList from "./OrderCheckoutList";
 import firebase from "firebase/app";
+import LottieView from "lottie-react-native";
 
-
-
-export default function Cart({}) {
+export default function Cart({ navigation }) {
   const [modalVisible, setModalVisible] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const { items } = useSelector((state) => state.cartReducer.selectedItems);
   const total = items
@@ -22,12 +21,20 @@ export default function Cart({}) {
   console.log(totalAmount);
 
   const addOrderToFirebase = () => {
+    setLoading(true);
     const db = firebase.firestore();
-    db.collection("orders").add({
-      items: items,
-      createdAt: firebase.firestore.FieldValue.serverTimestamp(),
-    });
-    //setModalVisible(false);
+    db.collection("orders")
+      .add({
+        items: items,
+        createdAt: firebase.firestore.FieldValue.serverTimestamp(),
+      })
+      .then(() => {
+        setTimeout(() => {
+          setLoading(false);
+          // setModalVisible(false);
+          navigation.navigate("OrderCompleted");
+        }, 2500);
+      });
   };
 
   const styles = StyleSheet.create({
@@ -66,7 +73,7 @@ export default function Cart({}) {
       <>
         <View style={styles.modalContainer}>
           <View style={styles.modalCheckoutContainer}>
-            <Text style={styles.modalCheckoutButton}> Restaurant Name </Text>
+            <Text style={styles.modalCheckoutButton}> Mexican Tavern </Text>
             {items.map((item, index) => (
               <OrderCheckoutList key={index} item={item} />
             ))}
@@ -89,8 +96,9 @@ export default function Cart({}) {
                   position: "relative",
                 }}
                 onPress={() => {
-                  addOrderToFirebase();
+                  //addOrderToFirebase();
                   setModalVisible(false);
+                  navigation.navigate("OrderCompleted");
                 }}
               >
                 <Text> Submit Payment </Text>
@@ -100,12 +108,11 @@ export default function Cart({}) {
                     right: 20,
                     bottom: 10,
                     fontSize: 15,
-                    right: 10,
+                    right: 1,
                   }}
                 >
-                  {" "}
-                  {total ? totalAmount : " "}
-                  {"$"}
+                  {"   "}
+                  {total ? totalAmount : ""}
                 </Text>
               </TouchableOpacity>
             </View>
@@ -124,46 +131,50 @@ export default function Cart({}) {
       >
         {checkoutContent()}
       </Modal>
-      <View
-        style={{
-          flex: 1,
-          alignItems: "center",
-          justifyContent: "flex-end",
-          flexDirection: "row",
-          position: "relative",
-          bottom: 5,
-          zIndex: 999,
-        }}
-      >
+      {total ? (
         <View
           style={{
+            flex: 1,
+            alignItems: "center",
+            justifyContent: "flex-end",
             flexDirection: "row",
-            justifyContent: "center",
-            width: "100%",
+            position: "relative",
+            bottom: 5,
+            zIndex: 999,
           }}
         >
-          <TouchableOpacity
+          <View
             style={{
-              marginTop: 20,
-              backgroundColor: "#a89a32",
               flexDirection: "row",
-              justifyContent: "flex-end",
-              padding: 15,
-              borderRadius: 50,
-              width: 200,
-              position: "relative",
+              justifyContent: "center",
+              width: "100%",
             }}
-            onPress={() => setModalVisible(true)}
           >
-            <Text style={{ color: "black", fontSize: 20, marginRight: 50 }}>
-              Cart
-            </Text>
-            <Text style={{ color: "black", fontSize: 20 }}>
-              {totalAmount} {"$"}
-            </Text>
-          </TouchableOpacity>
+            <TouchableOpacity
+              style={{
+                marginTop: 20,
+                backgroundColor: "#a89a32",
+                flexDirection: "row",
+                justifyContent: "flex-end",
+                padding: 15,
+                borderRadius: 50,
+                width: 200,
+                position: "relative",
+              }}
+              onPress={() => setModalVisible(true)}
+            >
+              <Text style={{ color: "black", fontSize: 20, marginRight: 50 }}>
+                Cart
+              </Text>
+              <Text style={{ color: "black", fontSize: 20 }}>
+                {totalAmount} {"$"}
+              </Text>
+            </TouchableOpacity>
+          </View>
         </View>
-      </View>
+      ) : (
+        <></>
+      )}
     </>
   );
 }

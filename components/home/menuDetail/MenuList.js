@@ -6,8 +6,8 @@ import { useDispatch, useSelector } from "react-redux";
 
 const styles = StyleSheet.create({
   menuListStyle: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
+    flexDirection: "row",
+    justifyContent: "space-between",
     margin: 20,
   },
 
@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
   },
 });
 
-export default function MenuList({ foodList }) {
+export default function MenuList({ foodList, hideCheckbox, marginLeft }) {
   //on press of checkbox the item will be added to the cart
   const dispatch = useDispatch();
   const selectItem = (item, checkboxValue) =>
@@ -40,17 +40,21 @@ export default function MenuList({ foodList }) {
       {foodList.map((food, index) => (
         <View key={index}>
           <View style={styles.menuListStyle}>
-            <BouncyCheckbox
-              iconStyle={{
-                borderColor: "Gray",
-                borderRadius: 7,
-              }}
-              fillColor="#a89a32"
-              isChecked={isFoodInCart(food, cartItems)}
-              onPress={(checkboxValue) => selectItem(food, checkboxValue)}
-            />
+            {hideCheckbox ? (
+              <></>
+            ) : (
+              <BouncyCheckbox
+                iconStyle={{
+                  borderColor: "Gray",
+                  borderRadius: 7,
+                }}
+                fillColor="#a89a32"
+                isChecked={isFoodInCart(food, cartItems)}
+                onPress={(checkboxValue) => selectItem(food, checkboxValue)}
+              />
+            )}
             <FoodInfo food={food} />
-            <FoodImage food={food} />
+            <FoodImage food={food} marginLeft={marginLeft ? marginLeft : 0} />
           </View>
           <Divider
             width={0.4}
@@ -71,7 +75,7 @@ const FoodInfo = (props) => (
   </View>
 );
 
-const FoodImage = (props) => (
+const FoodImage = ({ marginLeft, ...props }) => (
   <View>
     <Image
       source={{ uri: props.food.image }}
@@ -79,6 +83,7 @@ const FoodImage = (props) => (
         width: 100,
         height: 100,
         borderRadius: 8,
+        marginLeft: marginLeft,
       }}
     />
   </View>

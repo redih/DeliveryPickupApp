@@ -44,8 +44,12 @@ export default function LoginBox({ navigation }) {
     navigation.navigate("CreateAccount");
   };
 
+
    const handleLoginin = () =>{
     signInWithEmailAndPassword(auth,email, pwd)
+  const handleLoginin = () => {
+    signInWithEmailAndPassword(auth, email, pwd)
+
       .then((userCredential) => {
         const user = userCredential.user;
         console.log("Succesfully logged in with: ", user.email);
