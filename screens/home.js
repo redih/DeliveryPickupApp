@@ -33,12 +33,19 @@ export default function Home({ navigation }) {
 
   return (
     <SafeAreaView style={{ backgroundColor: "#eee", flex: 1 }}>
+
+      <Text>
+        {'\n\n'}
+      </Text>
+      <Button style = {{}} title = "Account" onPress={HandleAccount} color = "#a89a32"/> 
+
       <Button
         style={{}}
         title="Account"
         onPress={HandleAccount}
         color="#a89a32"
       />
+
       <View style={{ backgroundColor: "white", padding: 20 }}>
         <HeaderTabs />
         <SearchBar />
