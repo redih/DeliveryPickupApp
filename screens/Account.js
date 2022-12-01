@@ -9,7 +9,8 @@ import {
   ScrollView,
   AppRegistry,
   KeyboardAvoidingView,
-  StyleSheet
+  StyleSheet, 
+  Alert
   
 } from "react-native";
 import { auth } from "../firebase";
@@ -21,26 +22,19 @@ export default function Account({ navigation }){
     signOut(auth).then(() => {
       console.log('Signed out')
       navigation.navigate("LoginBox")
+      Alert.alert("You are signed out Please Login again. ")
     })
     .catch(error => alert(error.message))
    }
 
   return (
     <SafeAreaView> 
-      {/* //Account */}
-
-    
     <ScrollView>
        <Button style={{}} 
             title="Sign Out" 
             color="#a89a32"
             onPress={handleLogOut} 
             />
-
-
-
-
-
     </ScrollView>
     </SafeAreaView>
   )}
