@@ -5,11 +5,7 @@ import OrderCheckoutList from "./OrderCheckoutList";
 import firebase from "firebase/app";
 import LottieView from "lottie-react-native";
 
-<<<<<<< HEAD
-export default function Cart({}) {
-=======
 export default function Cart({ navigation }) {
->>>>>>> 4a405a32f3eecee5b1077c30f5410f85094101e7
   const [modalVisible, setModalVisible] = useState(false);
   const [loading, setLoading] = useState(false);
 
@@ -104,7 +100,6 @@ export default function Cart({ navigation }) {
                   setModalVisible(false);
                   navigation.navigate("OrderCompleted");
                 }}
-                
               >
                 <Text> Submit Payment </Text>
                 <Text
