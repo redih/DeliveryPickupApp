@@ -21,6 +21,7 @@ export default function Cart({ navigation }) {
   console.log(totalAmount);
 
   const addOrderToFirebase = () => {
+    setLoading(true);
     const db = firebase.firestore();
     db.collection("orders")
       .add({
@@ -189,7 +190,7 @@ export default function Cart({ navigation }) {
         >
           <LottieView
             style={{ height: 200 }}
-            source={require("../../assets/animations/81133-waiting.json")}
+            //source={require("../assets/animations/81133-waiting.json")}
             autoPlay
             speed={3}
           />
