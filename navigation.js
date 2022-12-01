@@ -7,7 +7,6 @@ import LoginBox from "./screens/LoginBox";
 import { Provider as ReduxProvider } from "react-redux";
 import configureStore from "./redux/store";
 import Account from "./screens/Account";
-import BottomTab from "./components/home/BottomTab";
 
 const store = configureStore();
 
@@ -28,11 +27,6 @@ export default function RootNavigation() {
           <Stack.Screen name="Home" component={Home} />
           <Stack.Screen name="MenuDetails" component={MenuDetails} />
           <Stack.Screen name="Account" component={Account} />
-          
-   
-
-          
-
         </Stack.Navigator>
       </NavigationContainer>
     </ReduxProvider>

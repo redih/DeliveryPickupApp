@@ -5,8 +5,6 @@ import { useSelector } from "react-redux";
 import OrderCheckoutList from "./OrderCheckoutList";
 import firebase from "firebase/app";
 
-
-
 export default function Cart({}) {
   const [modalVisible, setModalVisible] = useState(false);
 
@@ -66,7 +64,7 @@ export default function Cart({}) {
       <>
         <View style={styles.modalContainer}>
           <View style={styles.modalCheckoutContainer}>
-            <Text style={styles.modalCheckoutButton}> Restaurant Name </Text>
+            <Text style={styles.modalCheckoutButton}> Mexican Tavern </Text>
             {items.map((item, index) => (
               <OrderCheckoutList key={index} item={item} />
             ))}
@@ -100,12 +98,11 @@ export default function Cart({}) {
                     right: 20,
                     bottom: 10,
                     fontSize: 15,
-                    right: 10,
+                    right: 1,
                   }}
                 >
-                  {" "}
-                  {total ? totalAmount : " "}
-                  {"$"}
+                  {"   "}
+                  {total ? totalAmount : ""}
                 </Text>
               </TouchableOpacity>
             </View>

@@ -10,12 +10,10 @@ import BottomTab from "../components/home/BottomTab";
 //const YELP_API_KEY = "FxaLdqDjplYWSg0FOHu7MUn9NN_j3tTVoDXbxFiR2vb6VufsvEYJWi5TQzJDJo9M8LeQuPqjhiI98458uzeVsti0K_hyvYDt2Q3q30ing6sPbZt3rwn-g_JSxbRBY3Yx";
 
 export default function Home({ navigation }) {
-
   const HandleAccount = () => {
-    navigation.navigate("Account")
+    navigation.navigate("Account");
+  };
 
-  }
-  
   //       const [restaurantData, setRestaurantData] = react.useState(mexicanFood);
   //     //  const getRestaurantFromYelp = () => {
   //             const yelpUrl = `https://api.yelp.com/v3/businesses/search?term=Tacos&location=Canton`;
@@ -35,7 +33,12 @@ export default function Home({ navigation }) {
 
   return (
     <SafeAreaView style={{ backgroundColor: "#eee", flex: 1 }}>
-      <Button style = {{}} title = "Account" onPress={HandleAccount}/> 
+      <Button
+        style={{}}
+        title="Account"
+        onPress={HandleAccount}
+        color="#a89a32"
+      />
       <View style={{ backgroundColor: "white", padding: 20 }}>
         <HeaderTabs />
         <SearchBar />
@@ -44,13 +47,9 @@ export default function Home({ navigation }) {
         {/* <Categories /> */}
         <RestaurantItem navigation={navigation} />
         {/* //restaurantData={restaurantData}  */}
-         
-
       </ScrollView>
       <Divider width={1} />
       <BottomTab />
-
-      
     </SafeAreaView>
   );
 }

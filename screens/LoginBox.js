@@ -103,12 +103,11 @@ export default function LoginBox({ navigation }) {
       .catch((error) => alert(error.message));
   };
 
-   const handleLoginin = () =>{
+  const handleLoginin = () => {
     signInWithEmailAndPassword(auth, email, pwd)
       .then((userCredential) => {
         const user = userCredential.user;
         console.log("Succesfully logged in with: ", user.email);
-
         navigation.navigate("Home");
       })
       .catch((error) => {
