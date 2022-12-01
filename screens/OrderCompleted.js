@@ -38,42 +38,40 @@ export default function OrderCompleted() {
 
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: "white" }}>
-      <View
-        style={{
-          margin: 15,
-          alignItems: "center",
-          height: "100%",
-        }}
-      >
-        <LottieView
-          style={{ height: 100, alignSelf: "center", marginBottom: 30 }}
-          source={require("../assets/animations/65530-restaurant-animated-icon.json")}
-          autoPlay
-          loop={true}
-          speed={0.9}
-        />
-
-        {items.map((item, index) => (
-          <OrderCheckoutList key={index} item={item} style={{}} />
-        ))}
-        <Text
+      <ScrollView>
+        <View
           style={{
-            fontSize: 20,
-            fontWeight: "bold",
-            paddingBottom: 60,
-            paddingTop: 50,
+            margin: 15,
+            alignItems: "center",
+            height: "100%",
           }}
         >
-          Your order at Mexican Tavern for {totalAmount}
-          {"$"} has been placed!{" "}
-        </Text>
-        <ScrollView>
+          <LottieView
+            style={{ height: 100, alignSelf: "center", marginBottom: 30 }}
+            source={require("../assets/animations/65530-restaurant-animated-icon.json")}
+            autoPlay
+            loop={true}
+            speed={0.9}
+          />
+          {items.map((item, index) => (
+            <OrderCheckoutList key={index} item={item} style={{}} />
+          ))}
+          <Text
+            style={{
+              fontSize: 20,
+              fontWeight: "bold",
+              paddingBottom: 60,
+              paddingTop: 20,
+            }}
+          >
+            Your order at Mexican Tavern for {totalAmount}
+            {"$"} has been placed!{" "}
+          </Text>
           <MenuList
             foodList={lastOrder.items}
             hideCheckbox={true}
             marginLeft={10}
           />
-
           <LottieView
             style={{ height: 200, alignSelf: "center" }}
             source={require("../assets/animations/122868-order-list-animation.json")}
@@ -81,8 +79,8 @@ export default function OrderCompleted() {
             loop={true}
             speed={0.7}
           />
-        </ScrollView>
-      </View>
+        </View>
+      </ScrollView>
     </SafeAreaView>
   );
 }

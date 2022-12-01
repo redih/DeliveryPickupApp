@@ -31,7 +31,7 @@ export default function Cart({ navigation }) {
       .then(() => {
         setTimeout(() => {
           setLoading(false);
-          setModalVisible(false);
+          // setModalVisible(false);
           navigation.navigate("OrderCompleted");
         }, 2500);
       });
@@ -100,6 +100,7 @@ export default function Cart({ navigation }) {
                   setModalVisible(false);
                   navigation.navigate("OrderCompleted");
                 }}
+                
               >
                 <Text> Submit Payment </Text>
                 <Text
@@ -172,28 +173,6 @@ export default function Cart({ navigation }) {
               </Text>
             </TouchableOpacity>
           </View>
-        </View>
-      ) : (
-        <></>
-      )}
-      {loading ? (
-        <View
-          style={{
-            backgroundColor: "black",
-            position: "absolute",
-            opacity: 0.6,
-            justifyContent: "center",
-            alignItems: "center",
-            height: "100%",
-            width: "100%",
-          }}
-        >
-          <LottieView
-            style={{ height: 200 }}
-            //source={require("../assets/animations/81133-waiting.json")}
-            autoPlay
-            speed={3}
-          />
         </View>
       ) : (
         <></>
