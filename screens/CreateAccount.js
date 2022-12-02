@@ -19,6 +19,7 @@ import {
   updateProfile,
 } from "firebase/auth";
 import { useEffect } from "react";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 
 
@@ -48,7 +49,7 @@ export default function LoginBox({ navigation }) {
             console.log("Registered logged in with: ", user.email);
 
 
-            navigation.navigate("LoginBox");
+           // navigation.navigate("LoginBox");
         }).catch((error) => alert(error.message));
       })
     
@@ -61,6 +62,7 @@ export default function LoginBox({ navigation }) {
 
 
   return (
+    <SafeAreaView>
     <ScrollView>
       <ImageBackground
         alignItems="center"
@@ -199,6 +201,7 @@ export default function LoginBox({ navigation }) {
         </View>
       </ImageBackground>
     </ScrollView>
+    </SafeAreaView>
   );
 }
 

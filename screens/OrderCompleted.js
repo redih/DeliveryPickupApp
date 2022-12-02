@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { View, Text, StyleSheet, ScrollView } from "react-native";
+import { View, Text, StyleSheet, ScrollView, Button} from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useSelector } from "react-redux";
 import LottieView from "lottie-react-native";
@@ -7,7 +7,10 @@ import MenuList from "../components/home/menuDetail/MenuList";
 import firebase from "firebase/compat";
 import OrderCheckoutList from "../components/home/menuDetail/OrderCheckoutList";
 
-export default function OrderCompleted() {
+
+export default function OrderCompleted({navigation}) {
+
+
   const [lastOrder, setLastOrder] = useState({
     items: [],
   });
@@ -21,6 +24,24 @@ export default function OrderCompleted() {
     style: "currency",
     currency: "USD",
   });
+  
+  // useEffect(() => {
+  //   const db = firebase.firestore();
+  //   const unsubscribe = db
+  //     .collection("orders")
+  //     .orderBy("createdAt", "desc")
+  //     .limit(1)
+  //     .onSnapshot((snapshot) => {
+  //       snapshot.docs.map((doc) => {
+  //         setLastOrder(doc.data());
+  //       });
+  //     });
+
+  function backToHome(){
+    navigation.navigate("Home")
+
+  }
+
 
   // useEffect(() => {
   //   const db = firebase.firestore();
@@ -34,6 +55,7 @@ export default function OrderCompleted() {
   //       });
   //     });
 
+>>>>>>> 0f39dd9a11305194c952b329e74f001f037a98da
   //   return () => unsubscribe();
   // }, []);
 
@@ -80,6 +102,7 @@ export default function OrderCompleted() {
             loop={true}
             speed={0.7}
           />
+          <Button style = {{}} title = "Back To Home" onPress={backToHome} color = "#a89a32"/> 
         </View>
       </ScrollView>
     </SafeAreaView>
