@@ -21,20 +21,21 @@ export default function OrderCompleted() {
     style: "currency",
     currency: "USD",
   });
-  useEffect(() => {
-    const db = firebase.firestore();
-    const unsubscribe = db
-      .collection("orders")
-      .orderBy("createdAt", "desc")
-      .limit(1)
-      .onSnapshot((snapshot) => {
-        snapshot.docs.map((doc) => {
-          setLastOrder(doc.data());
-        });
-      });
 
-    return () => unsubscribe();
-  }, []);
+  // useEffect(() => {
+  //   const db = firebase.firestore();
+  //   const unsubscribe = db
+  //     .collection("orders")
+  //     .orderBy("createdAt", "desc")
+  //     .limit(1)
+  //     .onSnapshot((snapshot) => {
+  //       snapshot.docs.map((doc) => {
+  //         setLastOrder(doc.data());
+  //       });
+  //     });
+
+  //   return () => unsubscribe();
+  // }, []);
 
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: "white" }}>
