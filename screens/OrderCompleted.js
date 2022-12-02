@@ -24,7 +24,7 @@ export default function OrderCompleted({navigation}) {
     style: "currency",
     currency: "USD",
   });
-  
+
   // useEffect(() => {
   //   const db = firebase.firestore();
   //   const unsubscribe = db
@@ -55,7 +55,7 @@ export default function OrderCompleted({navigation}) {
   //       });
   //     });
 
->>>>>>> 0f39dd9a11305194c952b329e74f001f037a98da
+
   //   return () => unsubscribe();
   // }, []);
 
