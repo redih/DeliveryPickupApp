@@ -149,4 +149,4 @@ export default function LoginBox({ navigation }) {
     </ScrollView>
   );
 }
-
+}
