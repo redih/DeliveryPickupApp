@@ -39,13 +39,6 @@ export default function Home({ navigation }) {
       </Text>
       <Button style = {{}} title = "Account" onPress={HandleAccount} color = "#a89a32"/> 
 
-      <Button
-        style={{}}
-        title="Account"
-        onPress={HandleAccount}
-        color="#a89a32"
-      />
-
       <View style={{ backgroundColor: "white", padding: 20 }}>
         <HeaderTabs />
         <SearchBar />

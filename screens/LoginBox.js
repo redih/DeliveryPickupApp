@@ -113,8 +113,6 @@ export default function LoginBox({ navigation }) {
             onChangeText={(text) => setpwd(text)}
           />
           <Text>{"\n"}</Text>
-          {/* // <Button style={{}} title="Lets Dig In" onPress={pressHandler} /> */}
-          <Text>{"\n"}</Text>
           <View>
             <TouchableOpacity activeOpacity={1} style={{ marginBottom: 30 }}>
               <Button
