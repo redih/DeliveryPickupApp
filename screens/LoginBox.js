@@ -10,7 +10,7 @@ import {
   AppRegistry,
   KeyboardAvoidingView,
   StyleSheet,
-  Alert
+  Alert,
 } from "react-native";
 import { auth } from "../firebase";
 import {
@@ -19,13 +19,8 @@ import {
 } from "firebase/auth";
 import { useEffect } from "react";
 
-
-
-
 const image =
   "https://media.discordapp.net/attachments/1011779060592033812/1014291034668290080/download_6.png";
-
-
 
 export default function LoginBox({ navigation }) {
   const [email, setEmail] = useState("");
@@ -44,12 +39,8 @@ export default function LoginBox({ navigation }) {
     navigation.navigate("CreateAccount");
   };
 
-
-   const handleLoginin = () =>{
-    signInWithEmailAndPassword(auth,email, pwd)
   const handleLoginin = () => {
     signInWithEmailAndPassword(auth, email, pwd)
-
       .then((userCredential) => {
         const user = userCredential.user;
         console.log("Succesfully logged in with: ", user.email);
@@ -89,7 +80,6 @@ export default function LoginBox({ navigation }) {
 
           <TextInput
             style={{
-
               height: 45,
               width: "45%",
               borderColor: "black",
@@ -149,4 +139,3 @@ export default function LoginBox({ navigation }) {
     </ScrollView>
   );
 }
-
